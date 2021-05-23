@@ -1,0 +1,19 @@
+<div fxLayout="column wrap" class="w-100-p">
+  <div class="header">
+    {{data.title}}
+  </div>
+  <hr/>
+  <div class="body">
+    <div class="col-lg-12" [innerHTML]="data.description">
+    </div>
+  </div>
+  <hr/>
+  <div class="footer text-right rtl" fxLayoutAlign="end center" >
+    <div fxFlex="row wrap end" class="flr">
+      <button mat-button (click)="onNoClick()" class="secondary">Cancel</button>&nbsp;
+      <button mat-button (click)="onYesClick()" class="primary" cdkFocusInitial
+      >Confirm
+      </button>
+    </div>
+  </div>
+</div>

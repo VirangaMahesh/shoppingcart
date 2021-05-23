@@ -1,0 +1,8 @@
+{
+  "/shoppingcart": {
+    "target": "http://localhost:8818",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}

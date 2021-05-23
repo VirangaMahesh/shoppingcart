@@ -1,0 +1,55 @@
+<ng-container *ngIf="hasCart()">
+  <mat-card class="mat-elevation-z8">
+    <div fxLayout="column" fxLayoutGap="15px" fxLayoutAlign="center center" class="basket-body">
+      <div fxLayout="column">
+        <span class="text-center your-order">Your Basket</span>
+      </div>
+
+      <ng-container *ngFor="let cartItem of cardItems; let i = index;">
+        <app-cart-item
+          [cartItem]="cartItem"
+          [index]="i"
+          class="w-100-p"></app-cart-item>
+      </ng-container>
+
+
+      <div *ngIf="hasDiscount()"
+           class="w-100-p"
+           fxLayout="row" fxLayoutAlign="space-between center">
+        <span class="bold-font">Total Price </span>
+        <span class="total-fee-price">{{getTotalAmount()}}</span>
+      </div>
+
+
+      <div *ngIf="hasDiscount()"
+           class="w-100-p"
+           fxLayout="row" fxLayoutAlign="space-between center">
+        <span class="bold-font">Total Discount</span>
+        <span class="total-fee-price">{{getDiscountAmount()}}</span>
+      </div>
+
+      <div
+        class="w-100-p total-row"
+        fxLayout="row" fxLayoutAlign="space-between center">
+        <span>Total Amount</span>
+        <span class="total-price">{{getNetAmount()}}</span>
+      </div>
+
+
+      <button
+        (click)="calculatePrices()"
+        class="w-100-p checkout-btn" mat-raised-button color="primary">
+        Checkout
+      </button>
+
+    </div>
+  </mat-card>
+</ng-container>
+
+<ng-container *ngIf="!hasCart()">
+  <mat-card class="mat-elevation-z2">
+  <div fxLayout="column" fxLayoutAlign="center center">
+    <span class="no-item-message">No item(s) selected</span>
+  </div>
+  </mat-card>
+</ng-container>

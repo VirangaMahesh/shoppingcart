@@ -1,0 +1,75 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+
+.snack-bar-error {
+  background-color: #D32F2F !important;
+
+  button {
+    color: #FFF !important;
+  }
+}
+
+.snack-bar-success {
+  background-color: #388E3C !important;
+
+  button {
+    color: #FFF !important;
+  }
+}
+
+.snack-bar-warning {
+  background-color: #FFA000 !important;
+
+  button {
+    color: #FFF !important;
+  }
+}
+
+.snack-bar-info {
+  background-color: #303F9F !important;
+
+  button {
+    color: #FFF !important;
+  }
+}
+
+.snack-bar-custom {
+  background-color: #5D4037;
+
+  button {
+    color: #FFF;
+  }
+}
+
+.icon-button {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.header-div {
+  padding: 15px;
+  background-color: #d8d8d8;
+  font-size: 1.2rem;
+}
+
+.menu-bar {
+  width: 100px;
+  background-color: whitesmoke;
+}
+
+.menu-item {
+  padding: 3px;
+  border-bottom: #c9c9c9;
+  border-style: solid;
+  border: 1px;
+}

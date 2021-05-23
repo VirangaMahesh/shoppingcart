@@ -1,0 +1,20 @@
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav [mode]="'side'" [opened]="true" class="menu-bar">
+    <!--    <p><button mat-button (click)="sidenav.toggle()">Toggle</button></p>-->
+    <div class="menu-item"><mat-icon>home</mat-icon> Home</div>
+    <div (click)="loadProducts()" mat-menu-item class="menu-item">
+      <mat-icon>local_pharmacy</mat-icon>
+      Products
+    </div>
+    <div (click)="loadBasket()" mat-menu-item class="menu-item">
+      <mat-icon>add_shopping_cart</mat-icon>
+      Basket
+    </div>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div class="application">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

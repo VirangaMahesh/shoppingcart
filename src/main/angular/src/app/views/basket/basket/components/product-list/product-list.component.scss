@@ -1,0 +1,29 @@
+/* Structure */
+table {
+  width: 100%;
+
+  .rtl {
+    text-align: right;
+  }
+}
+.w-20-p{
+  width: 20%
+}
+.w-100-p{
+  width: 100%
+}
+.qty-input {
+  width: 20%;
+  padding: 3px;
+  margin: 5px;
+  border-radius: 5px;
+  background: #f0f5f3;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+.p-5{
+  padding: 5px;
+}

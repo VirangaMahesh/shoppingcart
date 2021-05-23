@@ -1,0 +1,36 @@
+<div class="w-100-p" fxLayout="row" fxLayoutAlign="space-between start">
+  <div fxLayout="row"
+       fxLayoutGap="10px"
+       fxLayoutAlign="space-between start"
+       class="w-70-p"
+  >
+    <div fxLayout="row"
+         fxLayoutGap="10px"
+         fxLayoutAlign="space-between center"
+         class="w-70-p"
+    >
+
+      <div fxLayout="column" fxLayoutGap="2px">
+        <span class="bold-font item-name">{{cartItem?.productName}}</span>
+
+      </div>
+    </div>
+
+    <div
+      fxLayout="row"
+      fxLayoutAlign="start center">
+
+      <span class="primary-color">{{cartItem.purchaseQuantity}}</span>
+      <mat-icon (click)="removeItem()" class="mat-18 remove-icon">remove_circle</mat-icon>
+    </div>
+
+  </div>
+
+  <div>
+    <span class="item-total-price">{{getCommonAmountFormatForGrid(cartItem?.netPrice)}}</span>
+  </div>
+</div>
+
+<div fxLayout="row" class="w-100-p special-intro" *ngIf="cartItem.instructions">
+  <span>{{cartItem.instructions}}</span>
+</div>

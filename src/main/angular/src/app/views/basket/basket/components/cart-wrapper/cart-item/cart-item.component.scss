@@ -1,0 +1,45 @@
+:host {
+  padding: 5px;
+  padding-top: 10px;
+}
+
+mat-icon {
+  font-size: 20px !important;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.edit-icon {
+  color: green;
+}
+
+.remove-icon {
+  color: #b40000;
+}
+
+.item-sub-name {
+  margin-top: 5px;
+  color: #717171;
+  font-weight: 400;
+}
+
+.item-sub-price {
+  font-size: 0.8rem;
+}
+
+.item-total-price {
+  color: #464646;
+}
+
+.special-intro {
+  margin-top: 4px;
+  font-size: 0.9rem;
+}
+.w-100-p{
+  width: 100%;
+}
+.w-70-p{
+  width: 70%;
+}
